@@ -1,0 +1,37 @@
+extends base 
+
+mixin navItems(link, text, icon, active)
+  li(class=`${active ? 'side-nav--active': ''}`)
+    a(href=`${link}`)
+      svg
+        use(xlink:href=`img/icons.svg#icon-${icon}`)
+      | #{text}
+
+
+block content 
+  main.main
+    .user-view
+      nav.user-view__menu
+        ul.side-nav
+          +navItems('/me', 'Your Profile', 'settings', true)
+          +navItems('/my-orders', 'Your Orders', 'briefcase')
+          +navItems('#', 'Your Lists', 'star')
+
+        - if (user.role === 'admin')
+          .admin-nav
+            h5.admin-nav__heading Admin
+            ul.side-nav
+              +navItems('/all-products', 'Manage products', 'map')
+              +navItems('/all-users', 'Manage users', 'users')
+              +navItems('/all-orders', 'Manage orders', 'star')
+
+      section#products.products
+        .flex
+          each user in users
+            .box
+              img(src=`/img/users/${user.photo}`, alt='')
+              h4 User name and email:
+              h4= `${user.name}`
+              h4= `${user.email}`
+              a.btn(href="#") edit
+                

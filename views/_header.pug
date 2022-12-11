@@ -1,0 +1,18 @@
+//- FreshGo
+header.header
+  a.logo(href="/")
+    i.fas.fa-shopping-basket
+    |  FreshGO
+  nav.nav.nav--user 
+    if user
+      nav.navbar
+        a.nav__el.nav__el--logout Log out 
+        a(href='/me')
+          img.nav__user-img(src=`/img/users/${user.photo}` alt=`photo of${user.name}`)
+          span= user.name.split(' ')[0]
+    else    
+      nav.navbar 
+        a(href='/login') Log in 
+        a(href='/signup') Sign up 
+
+

@@ -1,0 +1,23 @@
+extends base
+
+block content
+  .container
+    .left-column
+      img(src=`/img/fresh_go/${product.imageCover}`, alt='')   
+    .right-column   
+      .product-description
+        h1= `${product.name}`
+        p= `${product.description}`
+      .stars
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star-half-alt
+    
+      .product-price
+        span= `$${product.price}`
+        if user
+          button.btn.btn--green.span-all-rows#buy-product(data-product-id=`${product.id}`) Buy now!
+        else 
+          a.btn.btn--green.span-all-rows(href='/login') Log in to buy

@@ -1,0 +1,107 @@
+extends base  
+
+block content 
+  //- freshGO
+  section#home.home
+    .content
+      h3 fresh and 
+        span organic
+        | product for your
+      p
+        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        | Saepe dolore asperiores sint odit ab id repudiandae! 
+        | Doloribus nisi dolorem corrupti saepe iste possimus soluta veritatis, 
+        | voluptate sunt autem quis sint?
+      a.btn(href="#products") shop now
+
+  section#features.features
+    h1.heading our 
+      span features
+    .box-container
+      .box
+        img(src='/img/fresh_go/feature-img-1.png', alt='')
+        h3 fresh and organic
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        a.btn(href="#") read more
+      .box
+        img(src='/img/fresh_go/feature-img-2.png', alt='')
+        h3 free delivery
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        a.btn(href="#") read more
+      .box
+        img(src='/img/fresh_go/feature-img-3.png', alt='')
+        h3 easy payment
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        a.btn(href="#") read more
+
+  section#products.products
+    h1.heading our 
+      span products
+    .product-slider
+      each product in products
+        .box
+          img(src=`/img/fresh_go/${product.imageCover}`, alt='')
+          h3= `${product.name}`
+          .price= `$${product.price}`
+          .stars
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star-half-alt
+          a.btn(href=`/product_details/${product.name}`) details 
+  section#review.review
+        h1.heading customer&apos;s 
+          span review
+        .swiper.review-slider
+          .swiper-wrapper
+            .box
+              img(src="/img/fresh_go/pic-1.png", alt='')
+              p
+                | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non velit ea ullam praesentium quisquam natus modi, 
+                | aspernatur esse ad officia ab libero similique temporibus laboriosam enim, totam voluptatem consequuntur minus!
+              h3 john deo
+              .stars
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star-half-alt
+            .box
+              img(src="/img/fresh_go/pic-2.png", alt='')
+              p
+                | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non velit ea ullam praesentium quisquam natus modi, 
+                | aspernatur esse ad officia ab libero similique temporibus laboriosam enim, totam voluptatem consequuntur minus!
+              h3 john deo
+              .stars
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star-half-alt
+            .box
+              img(src="/img/fresh_go/pic-3.png", alt='')
+              p
+                | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non velit ea ullam praesentium quisquam natus modi, 
+                | aspernatur esse ad officia ab libero similique temporibus laboriosam enim, totam voluptatem consequuntur minus!
+              h3 john deo
+              .stars
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star-half-alt
+            .swipper-slider.box
+              img(src="/img/fresh_go/pic-4.png", alt='')
+              p
+                | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non velit ea ullam praesentium quisquam natus modi, 
+                | aspernatur esse ad officia ab libero similique temporibus laboriosam enim, totam voluptatem consequuntur minus!
+              h3 john deo
+              .stars
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star-half-alt
+        
+
