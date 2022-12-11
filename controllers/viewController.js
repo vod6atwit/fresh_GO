@@ -77,7 +77,7 @@ exports.getAllProducts = catchAsync(async (req, res, next) => {
   const products = await Product.find();
 
   res.status(200).render('product', {
-    title: 'My Product',
+    title: 'All Products',
     products,
   });
 });
@@ -87,7 +87,7 @@ exports.getAllUsers = catchAsync(async (req, res, next) => {
   const users = await User.find();
 
   res.status(200).render('user', {
-    title: 'My Tours',
+    title: 'All Users',
     users,
   });
 });

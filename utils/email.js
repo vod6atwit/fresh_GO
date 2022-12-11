@@ -60,13 +60,13 @@ module.exports = class Email {
   }
 
   async sendWelcome() {
-    await this.send('welcome', 'Welcome to the Natours Family!');
+    await this.send('welcome', 'Welcome to the FRESH GO Family!');
   }
 
   async sendPasswordReset() {
     await this.send(
       'passwordReset',
-      'Your Password Reset token (valid for only 10 minutes'
+      'Your Password Reset token (valid for only 10 minutes)'
     );
   }
 };

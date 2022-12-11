@@ -10,7 +10,8 @@ export const buyProduct = async (productId) => {
     );
     // get checkout session from API - orderController
     const session = await axios(
-      `http://127.0.0.1:8000/api/v1/orders/checkout-session/${productId}`
+      // `http://127.0.0.1:8000/api/v1/orders/checkout-session/${productId}`
+      `api/v1/orders/checkout-session/${productId}`
     );
     console.log(session);
 
