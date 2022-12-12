@@ -4,7 +4,7 @@ This is a group project for Software Engineering class
 
 Fresh GO (Fresh Groceries Online) is a web app that allows people to online shop their groceries and other home goods
 
-[Docker Image deployed to DockerHub:](https://hub.docker.com/repository/docker/vod6atwit/fresh_go)
+[Docker Image pushed to DockerHub](https://hub.docker.com/repository/docker/vod6atwit/fresh_go)
 
 ### **Features:**
 
@@ -68,6 +68,6 @@ The MVC architecture used here, is a way to structure the application developmen
 6. After all above step, run the command "docker run -p 8000:8000 vod6atwit/fresh_go"
 7. Then navigate to your web browser and type: http://localhost:8000/
 
-[Learn more about how to run Docker Image here:](https://docs.docker.com/)
+[Learn more about how to run Docker Image here](https://docs.docker.com/)
 
 <br><br>
