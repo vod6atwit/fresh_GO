@@ -5,7 +5,6 @@ const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
-const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 
 const AppError = require('./utils/appError');
@@ -110,21 +109,6 @@ app.use(mongoSanitize());
 
 // Data sanitizaiton against XSS
 app.use(xss());
-
-// Prevent parameter pollution
-app.use(
-  hpp({
-    // allow duplicate parameters
-    whitelist: [
-      'duration',
-      'ratingsAverage',
-      'ratingsQuantity',
-      'maxGroupSize',
-      'difficulty',
-      'price',
-    ],
-  })
-);
 
 // Test middleware
 app.use((req, res, next) => {
